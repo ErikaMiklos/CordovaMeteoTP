@@ -36,7 +36,12 @@ function getWeather(latitude, longitude) {
 
         if (results.weather.length) {
 
+            $('#lat').text(latitude);
+            $('#long').text(longitude);
+
             $('#description').text(results.name);
+            var temp = results.main.temp;
+            var tempInCelsius = (temp - 273.15).toFixed(1);
             $('#temp').text(results.main.temp);
             $('#wind').text(results.wind.speed);
             $('#humidity').text(results.main.humidity);
@@ -59,3 +64,7 @@ function onWeatherError(error) {
     console.log('code: ' + error.code + '\n' +
         'message: ' + error.message + '\n');
 }
+
+$(document).ready(function() {
+    getWeatherLocation();
+})
