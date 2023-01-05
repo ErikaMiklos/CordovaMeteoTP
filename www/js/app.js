@@ -48,3 +48,7 @@ $(document).ready(function() {
 
     getWeather();
 });
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});
