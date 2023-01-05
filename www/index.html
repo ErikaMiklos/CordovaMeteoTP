@@ -36,15 +36,26 @@
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/materialize.min.css">
-        <title>Application Météo</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>Application Météo: Home</title>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper teal">
-                <img src="img/sun-logo.jpg" alt="Logo"
-                class="brand-logo" width="50" height="50">
-            </div>
-        </nav>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper teal">
+                    <img src="img/sun-logo.jpg" alt="Logo" class="brand-logo" width="50" height="50">
+                    <a href="#" data-target="side-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="active"><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                        <li><a href="groups.html"><i class="material-icons left">group</i>Groups</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="side-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="groups.html">Groups</a></li>
+        </ul>
         <section class="margin" class="card-panel center-align">
             <form>
                 <div class="input-field">
